@@ -9,7 +9,7 @@ interface CardProps {
   image?: string; // Image is optional
 }
 
-const Card: React.FC<CardProps> = ({ heading, text, postId, image }) => {
+const Card = ({ heading, text, postId, image }:any) => {
   return (
     <div className="bg-[#f8f5f4] text-gray-700 p-6 border border-[#f8f5f4] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
       {image && (
