@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./blogcard/page";
 import blogPosts from "../_lib/data";
+import Image from "next/image";
 
 const Blogs: React.FC = () => {
   return (
@@ -9,16 +10,16 @@ const Blogs: React.FC = () => {
       <div
         className="relative overflow-hidden h-[50vh] flex items-center justify-center text-center"
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url(/bgimage.png)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "blur(3px)", // Apply blur to the background image
-            zIndex: -1, // Ensure the blurred background is behind the text
-          }}
-        ></div>
+         <div className="absolute inset-0">
+        <Image
+          src="/bgImage.png" // Replace with your image path
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="opacity-100" // Adjust the opacity here
+        />
+      </div>
         <div
           className="relative z-10 p-4"
           style={{
@@ -34,6 +35,7 @@ const Blogs: React.FC = () => {
           </p>
         </div>
       </div>
+
 
       {/* Blogs Section */}
       <div className="p-8">
