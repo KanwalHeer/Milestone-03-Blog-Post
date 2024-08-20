@@ -10,9 +10,9 @@ export default function Footer() {
             <p className="text-sm mt-1">Technology solutions to drive your digital transformation forward.</p>
           </div>
           <div className="flex flex-col items-center  justify-center sm:flex-row sm:items-center">
-            <a href="#" className="text-gray-400 hover:text-white mx-2">Home</a>
-            <a href="#" className="text-gray-400 hover:text-white mx-2">About</a>
-            <a href="#" className="text-gray-400 hover:text-white mx-2">Contact</a>
+            <a href="/" className="text-gray-400 hover:text-white mx-2">Home</a>
+            <a href="/blogs/about" className="text-gray-400 hover:text-white mx-2">About</a>
+            <a href="/blogs/contact" className="text-gray-400 hover:text-white mx-2">Contact</a>
           </div>
         </div>
         <div className="mt-2 text-center">
