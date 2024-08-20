@@ -7,25 +7,32 @@ const Blogs: React.FC = () => {
     <div>
       {/* Background Image Section */}
       <div
-        style={{
-          backgroundImage: "url(/bgimage.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "50vh",
-          color: "white",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          padding: "20px",
-        }}
+        className="relative overflow-hidden h-[50vh] flex items-center justify-center text-center"
       >
-        <h1>Welcome to Our Blog</h1>
-        <p>
-          Discover insightful articles, tutorials, and updates on various
-          topics. Stay tuned for the latest trends and tips.
-        </p>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url(/bgimage.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "blur(3px)", // Apply blur to the background image
+            zIndex: -1, // Ensure the blurred background is behind the text
+          }}
+        ></div>
+        <div
+          className="relative z-10 p-4"
+          style={{
+            background: "rgba(0, 0, 0, 0.4)", // Optional: semi-transparent background to enhance text readability
+          }}
+        >
+          <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">
+            Welcome to Our Blog
+          </h1>
+          <p className="text-white text-lg md:text-xl">
+            Discover insightful articles, tutorials, and updates on various
+            topics. Stay tuned for the latest trends and tips.
+          </p>
+        </div>
       </div>
 
       {/* Blogs Section */}

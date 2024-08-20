@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./home.module.css";
-import { FaFacebookF, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Import social media icons
+import {  FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Import social media icons
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
